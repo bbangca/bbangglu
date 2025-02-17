@@ -7,7 +7,7 @@ File(rootDir, "bbangglu-bbangca").listFiles { file ->
     )
 }?.forEach { dir ->
     println(dir.name)
-    include("bbanglu-bbangca:${dir.name}")
+    include("bbangglu-bbangca:${dir.name}")
 }
 
 
