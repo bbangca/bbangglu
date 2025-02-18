@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-dependencies{
+dependencies {
 
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.11.4")
@@ -13,4 +13,8 @@ dependencies{
     // Assertion 사용
     // https://mvnrepository.com/artifact/org.assertj/assertj-core
     testImplementation("org.assertj:assertj-core:3.27.3")
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
