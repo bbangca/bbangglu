@@ -14,15 +14,30 @@ public class CaseConverter {
     }
 
     public String solution(String str) {
-        StringBuilder builder = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
 
         for (char c : str.toCharArray()) {
 
-            builder.append(swapCase(c));
+            if (Character.isUpperCase(c)) {
+                sb.append(Character.toLowerCase(c));
+            } else {
+                sb.append(Character.toUpperCase(c));
+            }
         }
 
-        return builder.toString();
+        return sb.toString();
     }
+
+    public String solutionUsingASCII(String str) {
+        StringBuilder sb = new StringBuilder();
+
+        for (char c : str.toCharArray()) {
+            sb.append(swapCase(c));
+        }
+
+        return sb.toString();
+    }
+
 
     private char swapCase(char c) {
         //  대문자 판별
@@ -33,7 +48,4 @@ public class CaseConverter {
         return (char) (c - 32);
     }
 
-    private boolean isUpperCase(char ch) {
-        return true;
-    }
 }
