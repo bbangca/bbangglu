@@ -57,6 +57,8 @@ public class WordFinder {
             if (answer.length() < word.length()) {
                 answer = word;
             }
+            // 문자열을 잘라서 쓰는 이유 공백(" ")을 찾을때 이미 찾은 공백을 제거해야 한다.
+            // indexOf의 경우 찾으려는 문자의 처음 pos를 반환 하기 때문이다.
             str = str.substring(pos + 1);
         }
 
